@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'BootFont';
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #000000;
+}
+
+/* search bar */
+
+.search-bar {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    display: flex;
+    background-color: #323232;
+    color: #5E5E5E;
+    padding: 10px 400px;
+    border-radius: 25px;
+    font-family: 'BootFont', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    /* Abstand zwischen Bild und Text */
+}
+
+.search {
+    background-color: #323232;
+    border: none;
+    color: white;
+}
+
+/* navigationsmenue */
+
+.style1 {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background-color: #121212;
+    font-family: 'BootFont', sans-serif;
+}
+
+
+
+.nav-item {
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: #FF9900;
+}
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #FF9900;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* LOGO */
+
+.logo {
+    position: absolute;
+    height: 75px;
+    top: 20px;
+    left: 175px;
+}
+
+/* dropdown */
+
+#navbar {
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background-color: #121212;
+    font-family: 'BootFont', sans-serif;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+#navbar a:hover {
+    color: #FF9900;
+}
+
+#navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #FF9900;
+    transition: width 0.3s ease;
+}
+
+#navbar:hover::after {
+    width: 100%;
+}
+
+/* collapsing side panel */
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #121212;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidepanel a , .sidepanel button{
+    padding: 1px 2px 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+    font-family: 'BootFont', sans-serif;
+
+}
+
+.sidepanel a:hover, .sidepanel button:hover {
+    color: #FF9900;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+#sidepanel{
+    text-align: center;
+}
+
+.openbtn {
+    z-index: 1;
+    cursor: pointer;
+    background-color: transparent;
+    color: #FF9900;
+    padding: 10px 15px;
+    top: 24px;
+    left: 120px;
+    border: none;
+    position: absolute;
+    font-size: 32px;
+}
+
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: green;
+    color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #323232;
+    padding-left: 8px;
+}
+
+.dropdown-container a {
+    color: #5E5E5E;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+
+
+
